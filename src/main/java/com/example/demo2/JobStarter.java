@@ -202,7 +202,9 @@ public class JobStarter {
             @Override
             public void afterJob(JobExecution jobExecution) {
                 List<Item> all = itemService.findAll();
-                assert all.size() > 100;
+                if (100 != all.size()) {
+                    throw new RuntimeException("Error");
+                }
                 SpringApplication.exit(applicationContext);
             }
         };
