@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.inventorsoft.demo2;
 
 import org.springframework.batch.core.configuration.annotation.DefaultBatchConfigurer;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;

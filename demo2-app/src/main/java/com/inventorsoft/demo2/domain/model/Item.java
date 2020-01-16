@@ -1,4 +1,4 @@
-package com.example.demo2.domain.model;
+package com.inventorsoft.demo2.domain.model;
 
 import lombok.AccessLevel;
 import lombok.Getter;

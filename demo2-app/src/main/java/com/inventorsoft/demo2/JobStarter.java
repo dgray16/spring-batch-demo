@@ -1,8 +1,8 @@
-package com.example.demo2;
+package com.inventorsoft.demo2;
 
-import com.example.demo2.domain.model.Item;
-import com.example.demo2.domain.repository.ItemRepository;
-import com.example.demo2.domain.service.ItemService;
+import com.inventorsoft.demo2.domain.model.Item;
+import com.inventorsoft.demo2.domain.repository.ItemRepository;
+import com.inventorsoft.demo2.domain.service.ItemService;
 import lombok.AccessLevel;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;

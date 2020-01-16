@@ -1,4 +1,4 @@
-package com.example.demo2;
+package com.inventorsoft.demo2;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

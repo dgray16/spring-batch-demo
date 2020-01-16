@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.inventorsoft.demo1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

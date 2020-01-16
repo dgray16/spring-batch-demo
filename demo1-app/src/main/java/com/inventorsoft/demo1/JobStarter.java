@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.inventorsoft.demo1;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
@@ -36,15 +36,20 @@ public class JobStarter {
 
     @Bean
     Step step(StepBuilderFactory stepBuilderFactory, ThreadPoolTaskExecutor threadPoolTaskExecutor) {
-        List<Integer> integers = Collections.synchronizedList(IntStream.range(0, 100).boxed().collect(Collectors.toList()));
+
+        List<Integer> integers = Collections.synchronizedList(
+                IntStream.range(0, 100).boxed().collect(Collectors.toList())
+        );
 
         ItemReader<Integer> reader = () -> integers.isEmpty() ? null : integers.remove(0);
 
         ItemWriter<Integer> writer = items -> {
             TimeUnit.MILLISECONDS.sleep(400L);
             if (Objects.nonNull(items) && !items.isEmpty()) {
+
                 Map<Integer, String> newMap = items.stream()
                         .collect(Collectors.toMap(Function.identity(), String::valueOf));
+
                 map.putAll(newMap);
 
                 log.info("Map size: {}", map.size());
