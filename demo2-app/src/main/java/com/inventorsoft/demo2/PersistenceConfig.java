@@ -10,7 +10,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import javax.sql.DataSource;
 
 @Configuration(proxyBeanMethods = false)
-@EnableJdbcRepositories(basePackages = "com.example.demo2.domain.repository")
+@EnableJdbcRepositories(basePackages = "com.inventorsoft.demo2.domain.repository")
 public class PersistenceConfig {
 
     @Bean
