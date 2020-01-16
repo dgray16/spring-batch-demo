@@ -23,7 +23,8 @@ import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
@@ -41,9 +42,7 @@ import java.util.stream.IntStream;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class JobStarter {
 
-    FileSystemResource resource = new FileSystemResource(
-            "/home/developer-vova/IdeaProjects/demo/src/main/resources/demo2.csv"
-    );
+    Resource resource = new ClassPathResource("demo2.csv");
 
     ItemRepository itemRepository;
     ItemService itemService;
